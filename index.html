@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskNest — Student Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-brand">
+      <span class="nest-icon">🪺</span>
+      <span class="brand-text">Task<strong>Nest</strong></span>
+    </div>
+    <nav class="nav-links">
+      <button class="nav-btn active" data-view="overview">Overview</button>
+      <button class="nav-btn" data-view="tasks">Tasks</button>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" title="Search">🔍</button>
+      <div class="avatar">YM</div>
+      <button class="hamburger" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="nav-btn active" data-view="overview">Overview</button>
+    <button class="nav-btn" data-view="tasks">Tasks</button>
+  </div>
+
+  <div class="search-bar-wrap" id="searchBar">
+    <input type="text" id="searchInput" placeholder="Search tasks…" />
+  </div>
+
+  <main class="main-container">
+
+    <section class="section" id="overviewSection">
+      <h2 class="section-title">Overview</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num" id="totalCount">0</span>
+          <span class="stat-label">Total Tasks</span>
+        </div>
+        <div class="stat-card accent-yellow">
+          <span class="stat-num" id="pendingCount">0</span>
+          <span class="stat-label">Pending</span>
+        </div>
+        <div class="stat-card accent-green">
+          <span class="stat-num" id="completedCount">0</span>
+          <span class="stat-label">Completed</span>
+        </div>
+      </div>
+
+      <div class="progress-card">
+        <div class="progress-header">
+          <span>Progress</span>
+          <span id="progressPercent" class="progress-pct">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressBa
